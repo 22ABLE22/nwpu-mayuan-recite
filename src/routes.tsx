@@ -5,6 +5,7 @@ import ExplanationPage from './pages/ExplanationPage';
 import TermsListPage from './pages/TermsListPage';
 import ExamPage from './pages/ExamPage';
 import ExamResultPage from './pages/ExamResultPage';
+import SearchPage from './pages/SearchPage';
 import type { ReactNode } from 'react';
 
 interface RouteConfig {
@@ -49,6 +50,11 @@ const routes: RouteConfig[] = [
     name: '考试结果',
     path: '/exam-result',
     element: <ExamResultPage />,
+  },
+  {
+    name: '搜索词库',
+    path: '/search',
+    element: <SearchPage />,
   },
 ];
 

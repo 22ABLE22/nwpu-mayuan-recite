@@ -4,7 +4,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { getUserStats } from '@/db/api';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { BookOpen, CheckCircle, HelpCircle, XCircle, PlayCircle, FileText } from 'lucide-react';
+import { BookOpen, CheckCircle, HelpCircle, XCircle, PlayCircle, FileText, Search } from 'lucide-react';
 
 export default function HomePage() {
   const { user } = useAuth();
@@ -38,6 +38,10 @@ export default function HomePage() {
 
   const handleExam = () => {
     navigate('/exam');
+  };
+
+  const handleSearch = () => {
+    navigate('/search');
   };
 
   const handleViewTerms = (status: string) => {
@@ -161,8 +165,17 @@ export default function HomePage() {
         </Card>
       </div>
 
-      {/* 开始按钮 */}
-      <div className="flex justify-center gap-4">
+      {/* 操作按钮 */}
+      <div className="flex flex-wrap justify-center gap-4">
+        <Button
+          size="lg"
+          variant="outline"
+          className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
+          onClick={handleSearch}
+        >
+          <Search className="h-6 w-6 mr-2" />
+          搜索词库
+        </Button>
         <Button
           size="lg"
           className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
