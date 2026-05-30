@@ -1,0 +1,103 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* 背景色：浅灰色 */
+    --background: 210 40% 98%;
+    --foreground: 217 91% 15%;
+    /* 卡片：白色 */
+    --card: 0 0% 100%;
+    --card-foreground: 217 91% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 91% 15%;
+    /* 主色：深蓝色 #1E3A8A */
+    --primary: 217 91% 33%;
+    --primary-foreground: 0 0% 100%;
+    /* 辅助色：橙色 #F97316 */
+    --secondary: 24 95% 53%;
+    --secondary-foreground: 0 0% 100%;
+    /* 柔和背景色 */
+    --muted: 210 40% 96%;
+    --muted-foreground: 217 33% 45%;
+    /* 强调色：浅橙色 */
+    --accent: 24 95% 95%;
+    --accent-foreground: 217 91% 33%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 33%;
+    --chart-1: 217 91% 33%;
+    --chart-2: 24 95% 53%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 217 91% 15%;
+    --sidebar-primary: 217 91% 33%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 217 91% 33%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 217 91% 33%;
+  }
+
+  .dark {
+    /* 背景色：深蓝灰 */
+    --background: 217 33% 12%;
+    --foreground: 210 40% 98%;
+    /* 卡片：稍浅的深蓝灰 */
+    --card: 217 33% 16%;
+    --card-foreground: 210 40% 98%;
+    --popover: 217 33% 16%;
+    --popover-foreground: 210 40% 98%;
+    /* 主色：亮蓝色 */
+    --primary: 217 91% 60%;
+    --primary-foreground: 217 33% 12%;
+    /* 辅助色：橙色 */
+    --secondary: 24 95% 53%;
+    --secondary-foreground: 0 0% 100%;
+    /* 柔和背景色 */
+    --muted: 217 33% 20%;
+    --muted-foreground: 217 20% 70%;
+    /* 强调色：深橙色 */
+    --accent: 24 50% 20%;
+    --accent-foreground: 24 95% 90%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 217 91% 60%;
+    --chart-1: 217 91% 60%;
+    --chart-2: 24 95% 53%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 217 33% 16%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 217 33% 12%;
+    --sidebar-accent: 217 33% 20%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 20%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
