@@ -42,13 +42,17 @@ supabase/
 
 ## 数据与配置
 
-运行时从 `.env` 读取三项配置：
+运行时从 `.env` 读取三项配置。仓库只保留模板 `.env.example`，`.env` 已被 `.gitignore` 忽略，复制后填入自己的值：
 
+```bash
+cp .env.example .env
 ```
-VITE_SUPABASE_URL=...
-VITE_SUPABASE_ANON_KEY=...   # 匿名公钥，只能按 RLS 规则访问数据
-VITE_APP_ID=...
-```
+
+| 变量 | 说明 |
+| --- | --- |
+| `VITE_SUPABASE_URL` | Supabase 项目地址 |
+| `VITE_SUPABASE_ANON_KEY` | 匿名公钥，只能按 RLS 规则访问数据 |
+| `VITE_APP_ID` | 秒哒应用 ID |
 
 数据库三张表：`terms`（词条）、`profiles`（用户资料）、`user_progress`（学习进度）。三表均启用 RLS：匿名请求读不到任何行，登录用户只能读写自己的资料与进度。
 
@@ -64,3 +68,7 @@ pnpm lint   # tsgo 类型检查 + biome + ast-grep 规则
 ## 说明
 
 个人课程复习项目，与学校官方无关；词条释义整理自课程资料，仅用于学习交流。
+
+## 许可证
+
+本项目基于 [MIT](./LICENSE) 许可开源，Copyright © 2026 22ABLE22。

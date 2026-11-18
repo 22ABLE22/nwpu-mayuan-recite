@@ -32,3 +32,7 @@ history/*.json
 package.json.[0-9]*
 .native-wind-cache
 .vite
+
+# 环境变量：仓库只保留模板，本地自行复制
+.env
+.env.*.local
